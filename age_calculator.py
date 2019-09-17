@@ -12,9 +12,7 @@ def check_birthdate(year, month, day):
 		return False
 
 def calculate_age(year, month, day):
-	age = today.year - birth_year
+	age = date.year() - birth_year
 
-	return age
 
-	print("you are", calculate_age(birth_year, birth_month, birth_day), "years old")
-	
+print("you are", calculate_age(birth_year, birth_month, birth_day), "years old")
