@@ -1,7 +1,7 @@
 #Mad libs where libs get mad.
 #Start below:
 
-time = input("Enter a number:  ")
+time = input("Enter a number from 1 and 12:  ")
 items = input("Enter a noun: ")
 name = input("Enter a name: ")
 scream = input("Enter any sentence: ")

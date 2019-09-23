@@ -16,8 +16,9 @@ cv["age"] = age
 cv["experience"] = experience
 
 print("Choose any of the skills below: ")
-for skill in enumerate(skills,1):
-	print(skill)
+for skill in skills:
+	x = skills.index(skill) + 1 
+	print(x, skill)
 
 first_skill = input("Choose a skill from the list:  ")
 second_skill = input("Choose another skill from the list: ")
