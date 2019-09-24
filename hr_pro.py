@@ -16,11 +16,11 @@ class Employee:
 		return experience
 
 	def __str__(self):
-		return ("%s, %s, %s, %s, %s, %s, %s, %s, %s, %s") % ("Name: ", self.name, "Age: ", self.age, "Salary: ", self.salary, "Employeed since: ", self.employement_date, "Years of experience: ", self.get_working_years())
+		return "Name: %s, Age: %s, Salary: %s, Employeed since: %s, Years of experience: %s" % (self.name, self.age, self.salary, self.employement_date, self.get_working_years())
 
 class Manager(Employee):
 	def __init__(self, name, age, salary, employement_date, bonus_percentage):
-		Employee.__init__(self, name, age, salary, employement_date)
+		super().__init__(name, age, salary, employement_date)  #super so that when the parent class changes it still finds that parent class.
 		self.bonus_percentage = bonus_percentage
 
 	def get_bonus(self):
@@ -28,8 +28,7 @@ class Manager(Employee):
 		return bonus
 
 	def __str__(self):
-		return ("%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s") % ("Name: ", self.name, "Age: ", self.age, "Salary: ", self.salary, "Employeed since: ", self.employement_date, "Years of experience: ", self.get_working_years(), "Bonus: ", self.get_bonus())
-
+		return "Name: %s, Age: %s, Salary: %s, Employeed since: %s, Years of experience: %s, Bonus: %s" % (self.name, self.age, self.salary, self.employement_date, self.get_working_years(), self.get_bonus())
 
 print("Welcome to HR Pro 2019, choose an option:")
 options = ["Show Employees", "Show Managers", "Add an Employee", "Add a manager", "Exit"]
